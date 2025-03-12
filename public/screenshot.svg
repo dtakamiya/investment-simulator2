@@ -1,0 +1,62 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="800" height="500" fill="#f8fafc" />
+  
+  <!-- ヘッダー部分 -->
+  <rect x="50" y="30" width="700" height="80" rx="10" fill="#ffffff" />
+  <text x="400" y="70" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#4f46e5">資産運用シミュレーター</text>
+  <text x="400" y="95" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#64748b">初期投資額、毎月の積立額、年利、積立期間を入力して、将来の資産成長をシミュレーションしましょう。</text>
+  
+  <!-- 設定パネル -->
+  <rect x="50" y="130" width="700" height="150" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+  <text x="70" y="155" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">シミュレーション設定</text>
+  
+  <!-- 入力フィールド -->
+  <rect x="70" y="170" width="150" height="90" rx="5" fill="#f8fafc" />
+  <text x="80" y="190" font-family="Arial, sans-serif" font-size="12" fill="#475569">初期投資額</text>
+  <rect x="80" y="200" width="130" height="30" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+  <text x="145" y="220" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e293b">1,000,000</text>
+  
+  <rect x="240" y="170" width="150" height="90" rx="5" fill="#f8fafc" />
+  <text x="250" y="190" font-family="Arial, sans-serif" font-size="12" fill="#475569">毎月の積立額</text>
+  <rect x="250" y="200" width="130" height="30" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+  <text x="315" y="220" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e293b">3万円</text>
+  
+  <rect x="410" y="170" width="150" height="90" rx="5" fill="#f8fafc" />
+  <text x="420" y="190" font-family="Arial, sans-serif" font-size="12" fill="#475569">年利</text>
+  <rect x="420" y="200" width="130" height="30" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+  <text x="485" y="220" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e293b">5%</text>
+  
+  <rect x="580" y="170" width="150" height="90" rx="5" fill="#f8fafc" />
+  <text x="590" y="190" font-family="Arial, sans-serif" font-size="12" fill="#475569">積立期間</text>
+  <rect x="590" y="200" width="130" height="30" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+  <text x="655" y="220" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e293b">30年</text>
+  
+  <!-- 結果パネル -->
+  <rect x="50" y="300" width="700" height="170" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+  <text x="70" y="325" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">シミュレーション結果</text>
+  
+  <!-- 結果カード -->
+  <rect x="70" y="340" width="150" height="100" rx="8" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1" />
+  <text x="80" y="360" font-family="Arial, sans-serif" font-size="12" fill="#4f46e5">最終的な資産総額</text>
+  <text x="80" y="385" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#4338ca">¥5,467,290</text>
+  
+  <rect x="240" y="340" width="150" height="100" rx="8" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1" />
+  <text x="250" y="360" font-family="Arial, sans-serif" font-size="12" fill="#059669">投資元本</text>
+  <text x="250" y="385" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#047857">¥2,080,000</text>
+  
+  <rect x="410" y="340" width="150" height="100" rx="8" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1" />
+  <text x="420" y="360" font-family="Arial, sans-serif" font-size="12" fill="#7e22ce">運用益</text>
+  <text x="420" y="385" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#6d28d9">¥3,387,290</text>
+  
+  <rect x="580" y="340" width="150" height="100" rx="8" fill="#fffbeb" stroke="#fde68a" stroke-width="1" />
+  <text x="590" y="360" font-family="Arial, sans-serif" font-size="12" fill="#d97706">投資利回り</text>
+  <text x="590" y="385" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#b45309">162.85%</text>
+  
+  <!-- グラフ（簡易表現） -->
+  <rect x="50" y="490" width="700" height="0" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+  
+  <!-- 線グラフの簡易表現 -->
+  <path d="M100,450 Q250,400 400,350 T700,250" stroke="#4f46e5" stroke-width="3" fill="none" />
+  <path d="M100,450 L700,350" stroke="#10b981" stroke-width="2" fill="none" />
+</svg> 

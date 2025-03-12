@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 資産運用シミュレーター
 
-## Getting Started
+複利の力で資産がどのように成長するかをシミュレーションできるウェブアプリケーションです。初期投資額、毎月の積立額、年利、積立期間を入力することで、将来の資産成長を視覚的に確認できます。
 
-First, run the development server:
+![資産運用シミュレーター](https://github.com/dtakamiya/investment-simulator2/raw/main/public/screenshot.png)
+
+## デモ
+
+実際のアプリケーションは以下のURLでご覧いただけます：
+[https://dtakamiya.github.io/investment-simulator2/](https://dtakamiya.github.io/investment-simulator2/)
+
+## 機能
+
+- 初期投資額、毎月の積立額、年利、積立期間を自由に設定可能
+- 最終的な資産総額、投資元本、運用益、投資利回りを計算
+- グラフによる資産成長の視覚化
+- レスポンシブデザインでモバイル端末にも対応
+- 美しいUIと直感的な操作性
+
+## 技術スタック
+
+- [Next.js 15](https://nextjs.org/) - Reactフレームワーク
+- [React 19](https://react.dev/) - UIライブラリ
+- [TypeScript](https://www.typescriptlang.org/) - 型安全な開発環境
+- [Tailwind CSS](https://tailwindcss.com/) - スタイリング
+- [Chart.js](https://www.chartjs.org/) & [react-chartjs-2](https://react-chartjs-2.js.org/) - グラフ描画
+- [GitHub Pages](https://pages.github.com/) - ホスティング
+
+## 開発環境のセットアップ
+
+1. リポジトリをクローンします：
+
+```bash
+git clone https://github.com/dtakamiya/investment-simulator2.git
+cd investment-simulator2
+```
+
+2. 依存関係をインストールします：
+
+```bash
+npm install
+```
+
+3. 開発サーバーを起動します：
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. ブラウザで [http://localhost:3000](http://localhost:3000) を開いてアプリケーションを確認します。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## デプロイ方法
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+このプロジェクトはGitHub Pagesにデプロイするように設定されています。
 
-## Learn More
+1. GitHub上でリポジトリを作成します。
 
-To learn more about Next.js, take a look at the following resources:
+2. リモートリポジトリを追加します：
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+git remote add origin https://github.com/あなたのユーザー名/investment-simulator2.git
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. 変更をコミットしてプッシュします：
 
-## Deploy on Vercel
+```bash
+git add .
+git commit -m "Initial commit"
+git push -u origin main
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. 以下のコマンドでGitHub Pagesにデプロイします：
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run deploy
+```
+
+## 貢献方法
+
+1. このリポジトリをフォークします
+2. 新しいブランチを作成します (`git checkout -b feature/amazing-feature`)
+3. 変更をコミットします (`git commit -m 'Add some amazing feature'`)
+4. ブランチにプッシュします (`git push origin feature/amazing-feature`)
+5. プルリクエストを作成します
+
+## ライセンス
+
+MITライセンスの下で公開されています。詳細は [LICENSE](LICENSE) ファイルをご覧ください。
+
+## 作者
+
+Investment Simulator Team
