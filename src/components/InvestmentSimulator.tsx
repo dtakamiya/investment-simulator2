@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { 
   Chart as ChartJS, 
   CategoryScale, 
@@ -48,15 +48,15 @@ export default function InvestmentSimulator() {
     interestAmounts: []
   });
 
-  // 万単位から実際の金額に変換
-  const monthlyContribution = monthlyContributionInTenThousand * 10000;
-
   // シミュレーション計算関数
-  const calculateInvestment = () => {
+  const calculateInvestment = useCallback(() => {
     const labels: string[] = [];
     const totalAmounts: number[] = [];
     const investedAmounts: number[] = [];
     const interestAmounts: number[] = [];
+
+    // 万単位から実際の金額に変換
+    const monthlyContribution = monthlyContributionInTenThousand * 10000;
 
     // 月利に変換
     const monthlyReturnRate = (annualReturnRate / 100) / 12;
@@ -98,12 +98,15 @@ export default function InvestmentSimulator() {
       investedAmounts,
       interestAmounts
     });
-  };
+  }, [initialInvestment, monthlyContributionInTenThousand, annualReturnRate, investmentPeriod]);
 
   // 入力値が変更されたらシミュレーションを再計算
   useEffect(() => {
     calculateInvestment();
-  }, [initialInvestment, monthlyContribution, annualReturnRate, investmentPeriod]);
+  }, [calculateInvestment]);
+
+  // 万単位から実際の金額に変換
+  const monthlyContribution = monthlyContributionInTenThousand * 10000;
 
   // グラフデータ
   const chartData = {
@@ -242,22 +245,22 @@ export default function InvestmentSimulator() {
   };
 
   // 数値をフォーマットする関数
-  const formatCurrency = (value: number) => {
+  const formatCurrency = useCallback((value: number) => {
     return new Intl.NumberFormat('ja-JP', {
       style: 'currency',
       currency: 'JPY',
       maximumFractionDigits: 0
     }).format(value);
-  };
+  }, []);
 
   // 投資利回りの計算
-  const calculateROI = () => {
+  const calculateROI = useCallback(() => {
     const totalInvestment = simulationResults.investedAmounts[simulationResults.investedAmounts.length - 1] || 0;
     const totalReturn = simulationResults.interestAmounts[simulationResults.interestAmounts.length - 1] || 0;
     
     if (totalInvestment === 0) return 0;
     return (totalReturn / totalInvestment) * 100;
-  };
+  }, [simulationResults.investedAmounts, simulationResults.interestAmounts]);
 
   return (
     <div className="w-full max-w-5xl mx-auto p-6">
